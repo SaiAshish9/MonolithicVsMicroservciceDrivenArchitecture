@@ -334,7 +334,15 @@ Twitter
 
 <img width="1250" alt="Screenshot 2023-03-22 at 5 52 55 PM" src="https://user-images.githubusercontent.com/43849911/226903768-f8959e59-63d9-4241-b15f-c1fb3318bf17.png">
 
-
-
 <img width="1241" alt="Screenshot 2023-03-22 at 5 53 37 PM" src="https://user-images.githubusercontent.com/43849911/226903918-605ea67b-1e09-4f4c-b875-0a09cd041157.png">
 
+```
+An event-driven microservices architecture is an approach to software development where decoupled microservices are designed to communicate with one another when events occur. 
+These architectures are comprised of three critical features:
+
+Event producers, which detect and send events to routers when they occur,
+Event routers, which analyze events and determine where to send them, and
+Event consumers, which process events, handle them, and complete the action (e.g., updating a data warehouse to reflect current inventory levels).
+```
+
+https://www.voltactivedata.com/blog/2022/10/what-is-event-driven-microservices-architecture/
