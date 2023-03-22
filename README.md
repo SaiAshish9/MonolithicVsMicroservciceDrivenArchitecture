@@ -242,6 +242,10 @@ Identify why the current codebase doesn't scale and decide whether we need monor
 ```
 What is monolithic?
 
+
+It is a traditional model of a software program, which is built as a unified unit 
+that is self-contained and independent from other applications.
+
 A monolithic architecture is a traditional model of a software program.
 
 A monolithic architecture is a singular, large computing network.
@@ -264,9 +268,9 @@ Monolithic Architecture
 <img width="962" alt="Screenshot 2023-03-22 at 5 24 33 PM" src="https://user-images.githubusercontent.com/43849911/226897480-77e7c075-6be5-4c5f-bb97-5821731f7c18.png">
 
 ```
-What are monolithic?
+What are microservices?
 
-A series of independently deployable services
+It depends on a series of independently deployable services
 
 Updating, testing, deployment and scaling occurs with each service
 
@@ -280,3 +284,49 @@ Microservice Architecture
 ```
 
 <img width="1081" alt="Screenshot 2023-03-22 at 5 30 14 PM" src="https://user-images.githubusercontent.com/43849911/226898961-ce08a9f1-01a2-49d2-b44b-03b141dd316f.png">
+
+
+```
+Why to migrate from monolith to microservices:
+
+Netflix
+
+In 2009, netflix faced issues with the rapidly growing video streaming services.
+
+The company decided to update its architecture from a private data center to a
+public cloud. It has own multiple global awards for this migration and today it has more than 10k
+microservices which supports different parts of the platform.
+
+Amazon
+Atlassian
+
+Atlassian is an australian company founded in 2002, and its head quater is in sydney, australia.
+Atlassian migrated to microservices after they faced challenges with growing scale at
+jira and confluence.
+
+They found that their single tenant monolithic architecture cannot be able to scale as the feature needs.
+
+They decided to rearchitect jira and confluence and move their stateful single tenant monolithic system to muti tenant statless cloud application hosted by aws. They'll decompose them over time ti microservices.
+
+This project was named vertical anf it was their largest infrastructure project till date and it took 2 years to move into aws
+migrating over 100k customers in just 10 months with no service adoption, they also considered these services
+to microservices.
+
+ebay
+Twitter
+```
+
+<img width="1096" alt="Screenshot 2023-03-22 at 5 45 01 PM" src="https://user-images.githubusercontent.com/43849911/226902025-479de34c-d8e1-4895-a074-6c8ca2f43631.png">
+
+<img width="1108" alt="Screenshot 2023-03-22 at 5 47 31 PM" src="https://user-images.githubusercontent.com/43849911/226902549-5491efd9-5cd0-44bb-89cc-1ad545f0cb93.png">
+
+<img width="1079" alt="Screenshot 2023-03-22 at 5 49 28 PM" src="https://user-images.githubusercontent.com/43849911/226902992-12cddf54-2c4b-4df4-bcf0-a9d99caa2165.png">
+
+<img width="1057" alt="Screenshot 2023-03-22 at 5 47 59 PM" src="https://user-images.githubusercontent.com/43849911/226902644-89a000d3-4314-41f7-b1de-0cde3efd5d2a.png">
+
+<img width="1086" alt="Screenshot 2023-03-22 at 5 48 20 PM" src="https://user-images.githubusercontent.com/43849911/226902731-c6e8df55-1091-4e80-afe6-28e26afbe627.png">
+
+<img width="1132" alt="Screenshot 2023-03-22 at 5 49 51 PM" src="https://user-images.githubusercontent.com/43849911/226903097-6db7b9d3-4de8-4d80-86e0-fb8edc4db031.png">
+
+<img width="1140" alt="Screenshot 2023-03-22 at 5 50 17 PM" src="https://user-images.githubusercontent.com/43849911/226903214-6dab1a81-76cb-4f38-a19e-646ca133c724.png">
+
