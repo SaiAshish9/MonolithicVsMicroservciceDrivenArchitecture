@@ -113,7 +113,9 @@ Microsoft created rushjs which is now called rush because they moved it into typ
 <img width="1082" alt="Screenshot 2023-03-22 at 4 14 20 PM" src="https://user-images.githubusercontent.com/43849911/226879645-5ee0421d-1070-4108-b387-2b7feea90d12.png">
 
 ```
-How swiggy uses monorepos in their food delivery app:
+Case study: Mono repos at swiggy (food delivery app):
+
+
 
 ```
 
