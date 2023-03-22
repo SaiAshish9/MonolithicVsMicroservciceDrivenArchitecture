@@ -115,8 +115,87 @@ Microsoft created rushjs which is now called rush because they moved it into typ
 ```
 Case study: Mono repos at swiggy (food delivery app):
 
+They earlier had the dweb which is the desktop application of swiggy and mweb which is the mobile application of swiggy. So they had
+two different repositories , so when we open the mobile we get a different version and at mobile, we'll get another version.
+
+They'll served from different deployment and codebase.
+
+They were all coverging into a nodejs based api proxy which is also known as a service-proxy and it acts as a component
+between different middleware components which are hosted behind the systems.
+
+At a high level, we've three repositories one each for dweb, mweb and service api proxy.
+
+They were using react from frontend applications, webpack for packaging and babel for compiling js code into
+final executables.
+
+As the codebase grew swiggy recognised that they were some patterns where the code is being reused between mobile web and
+desktop web application.
+
+There was reusable code which was copy pasted and if there was a bug fix , they had to do that in both dweb and the
+mweb.
+
+In addition to that adding dependencies for react, webpack and babel becomes complicated as we keep on upgrading to
+different versions, we need to updated both the repositories but they had to do two diff. deployments separately, review
+them and test them separately.
+
+It was tidious for the team to add all the common code and setup in a library as it was huge and there are multiple teams which were
+working on these repositories.
+```
+
+<img width="1074" alt="Screenshot 2023-03-22 at 4 38 52 PM" src="https://user-images.githubusercontent.com/43849911/226886728-1d987864-5b25-4150-a24f-f5129edb6d14.png">
 
 
+```
+After they moved into monorepos , they changed the whole structure of the repository.
+
+So there was only one repository where they had the dweb, mweb and the service proxy.
+
+config inside repo had the webpack configuration which is reused by both the mobile and the web application.
+
+so if we update one particular webpack under config package it will be updated to both the deployments.
+
+They'll are in a same codebase but they are deployed as a separate artifact.
+
+Swiggy was able to create a unified web and mobile screens using the same ui package. 
+Different tenants were able to retrieve payments and reviews information from  
+associated packages.
+
+helpers are the common resuable logic which they pushed into a separte module
+
+swiggydaily.com is pushed under daily package, there are two different components used for mobile
+and web that's why there's a separate package called daily. swiggydaily.com has been stopped now.
+
+cache has the common caching components both for the mobile and web components.
+
+Multiple tenants can use the restaurant-url generator for the link.
+
+One need to think much before touching the common code base.
+
+This helped them to scale much easier. In order to build all these they're using lerna tool for building modules separately
+into different components
+
+Here are some of the pros which swiggy thinks can help them to scale the ui:
+1. same fix in 1 commit
+2. reusability
+3. dependency updates
+4. heterogeneity in ui vs mweb package
+5. simpler code review
+
+cons:
+1. long bootstrap times (startup time)
+2. more time for ROI
+3. slower code navigation
+```
+
+https://bytes.swiggy.com/monorepos-lets-talk-about-it-4b1b7d4f1038
+
+<img width="1121" alt="Screenshot 2023-03-22 at 4 42 51 PM" src="https://user-images.githubusercontent.com/43849911/226887526-91ed11c2-2200-4f21-ac6c-b9b6ec63a06d.png">
+
+```
+Limitations of mono repo:
+
+1. Codebase
+There going to be challenges in terms of size since monorepo can have a single codebase
 ```
 
 <img width="697" alt="Screenshot 2023-03-15 at 2 58 18 AM" src="https://user-images.githubusercontent.com/43849911/225140670-a00a84b3-7782-4654-b1d9-666b94a3c1fd.png">
