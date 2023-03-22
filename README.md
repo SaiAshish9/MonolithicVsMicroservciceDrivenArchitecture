@@ -242,5 +242,13 @@ Identify why the current codebase doesn't scale and decide whether we need monor
 ```
 What is monolithic?
 
+A monolithic architecture is a traditional model of a software program.
 
+A monolithic architecture is a singular, large computing network.
+
+To make a change to this sort of application requires updating the entire stack.
+
+Monolithic allows everything in the monolithic to be released at once.
 ```
+
+
