@@ -249,6 +249,34 @@ A monolithic architecture is a singular, large computing network.
 To make a change to this sort of application requires updating the entire stack.
 
 Monolithic allows everything in the monolithic to be released at once.
+
+In monolithic, programs are tightly coupled rather than loosely coupled.
+
+Tightly coupled applications consist of parallel processes that are dependent on each other to carry out the calculation. Unlike a loosely coupled computation, all processes of a tightly coupled simulation iterate together and require communication with one another.
+
+Loose coupling means that the degree of dependency between two components is very low. Tight coupling means that the degree of dependency between two components is very high.
 ```
 
+```
+Monolithic Architecture
+```
 
+<img width="962" alt="Screenshot 2023-03-22 at 5 24 33 PM" src="https://user-images.githubusercontent.com/43849911/226897480-77e7c075-6be5-4c5f-bb97-5821731f7c18.png">
+
+```
+What are monolithic?
+
+A series of independently deployable services
+
+Updating, testing, deployment and scaling occurs with each service
+
+Microservices doesn't reduce complexity.
+
+Adopting microservices often goes hand in hand with devOps
+```
+
+```
+Microservice Architecture
+```
+
+<img width="1081" alt="Screenshot 2023-03-22 at 5 30 14 PM" src="https://user-images.githubusercontent.com/43849911/226898961-ce08a9f1-01a2-49d2-b44b-03b141dd316f.png">
