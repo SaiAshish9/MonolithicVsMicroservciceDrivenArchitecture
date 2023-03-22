@@ -195,7 +195,46 @@ https://bytes.swiggy.com/monorepos-lets-talk-about-it-4b1b7d4f1038
 Limitations of mono repo:
 
 1. Codebase
-There going to be challenges in terms of size since monorepo can have a single codebase
+There going to be challenges in terms of size since monorepo can have a single codebase.
+If there are too many images stored in that codebase, we need to look at the version
+control system which can handle this humongous codebase. 
+
+Google uses their own version control system as with repository size of more than 10GB, 
+we can face issues with git.
+
+2. Operational Complexity
+There's going to be a lot of PRs to a single repo. and merge conflicts are going to be coming
+in as there are more teams contributing to the same repository.
+
+3. Payload Size during runtime
+
+what if one particular feature has a version for a dependency and other feature has different version 
+for other dependency. This creates longer runtime because page is going to download js files we've
+diff. microfrontends serving and adding different libraries during the course of time. This adds to the
+payload size and websites can be heavier in individual parts.
+
+4. Environment Differences
+
+When we test applications locally, we might test it in a diff. fashion and with microfrontends
+we cannot deploy the whole app in the way we run it locally. So it could be more tidious
+to setup microfrontends with monorepo in local compare to how we deploy to production. This may
+lead to production bugs which cannot be tested at local but only at production.
+```
+
+```
+Conclusion
+
+Monorepo != Monolith
+
+Monorepos are a way to manage multiple projects in a single repository.
+Microfrontends are a useful way to read benefits of monorepo as a whole
+
+Monorepos is not a silver bullet.
+
+It's not going to solve all the problems which we've.
+
+Identify why the current codebase doesn't scale and decide whether we need monorepos or not.
+
 ```
 
 <img width="697" alt="Screenshot 2023-03-15 at 2 58 18 AM" src="https://user-images.githubusercontent.com/43849911/225140670-a00a84b3-7782-4654-b1d9-666b94a3c1fd.png">
